@@ -11,6 +11,15 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - '*.gemspec'
+    - 'bin/*'
+    - 'Gemfile'
+    - 'db/*schema.rb'
+    - 'db/migrate/*'
+    - 'test/dummy/**/*'
+    - '**/*.erb'
+    - 'node_modules/**/*'
+    - 'config/routes.rb'
+
   NewCops: enable
   SuggestExtensions: false
 
