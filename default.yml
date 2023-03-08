@@ -12,6 +12,7 @@ AllCops:
     - 'vendor/**/*'
     - '*.gemspec'
   NewCops: enable
+  SuggestExtensions: false
 
 Bundler/OrderedGems:
   Enabled: false
