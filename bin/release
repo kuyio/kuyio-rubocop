@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+VERSION=$1
+
+printf "module Kuyio\n  module Rubocop\n    VERSION = \"$VERSION\"\n  end\nend" > ./lib/kuyio/rubocop/version.rb
+bundle
+git add Gemfile.lock lib/kuyio/rubocop/version.rb
+git commit -m "Bump version for $VERSION"
+git push
+git tag v$VERSION
+git push --tags
+gem build kuyio-rubocop.gemspec
+gem push "kuyio-rubocop-$VERSION.gem" --host https://rubygems.org
+rm "kuyio-rubocop-$VERSION.gem"
