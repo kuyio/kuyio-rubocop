@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Kuyio::Rubocop::VERSION
   spec.authors       = ["KUY.io Inc."]
   spec.email         = ["dev@kuy.io"]
-
+  spec.license       = 'MIT'
   spec.summary       = 'KUY.io shared rubocop configuration.'
   spec.homepage      = 'https://github.com/kuyio/kuyio-rubocop'
 

@@ -4,7 +4,7 @@ VERSION=$1
 
 printf "module Kuyio\n  module Rubocop\n    VERSION = \"$VERSION\"\n  end\nend" > ./lib/kuyio/rubocop/version.rb
 bundle
-git add Gemfile.lock lib/kuyio/rubocop/version.rb
+git add lib/kuyio/rubocop/version.rb
 git commit -m "Bump version for $VERSION"
 git push
 git tag v$VERSION
