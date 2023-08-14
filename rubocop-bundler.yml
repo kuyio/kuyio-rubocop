@@ -1,0 +1,4 @@
+---
+# Gems in consecutive lines should be alphabetically sorted
+Bundler/OrderedGems:
+  Enabled: false

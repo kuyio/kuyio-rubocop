@@ -1,0 +1,12 @@
+---
+# Dependencies in the gemspec should be alphabetically sorted
+# Configuration parameters: Include, TreatCommentsAsGroupSeparators.
+Gemspec/OrderedDependencies:
+  Include:
+    - '**/*.gemspec'
+
+# Enforce that development dependencies for a gem are specified in Gemfile,
+# rather than in the gemspec using add_development_dependency
+# Reason: Each project may decide to use a different strategy.
+Gemspec/DevelopmentDependencies:
+  Enabled: false

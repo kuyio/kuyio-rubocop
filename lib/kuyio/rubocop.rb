@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'kuyio/rubocop/version'
 
 module Kuyio
