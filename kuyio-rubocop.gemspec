@@ -35,9 +35,9 @@ Gem::Specification.new do |spec|
   # of the box without having to maintain rubocop gem
   # dependencies themselves.
   spec.add_dependency 'rubocop', '~> 1.50.2'
-  spec.add_dependency 'rubocop-performance', '~> 1.15'
-  spec.add_dependency 'rubocop-rails', '~> 2.17'
-  spec.add_dependency 'rubocop-rspec', '~> 2.22'
+  spec.add_dependency 'rubocop-performance', '~> 1.15.0'
+  spec.add_dependency 'rubocop-rails', '~> 2.17.0'
+  spec.add_dependency 'rubocop-rspec', '~> 2.22.0'
 
   spec.add_dependency "brakeman", "~> 5.4"
   spec.add_development_dependency "bundler", "~> 2.3"
