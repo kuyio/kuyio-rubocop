@@ -1,5 +1,8 @@
 ---
 AllCops:
+  # New cops will be triaged by style guide maintainers instead.
+  NewCops: disable
+  # Minimum Ruby version we want to target
   TargetRubyVersion: 3.0
   # Cop names are not displayed in offense messages by default. Change behavior
   # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
