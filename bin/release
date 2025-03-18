@@ -1,14 +1,31 @@
 #!/usr/bin/env bash
 
-VERSION=$1
+# This script is used to release a new version of the gem to GitHub
+# It updates the version number in the version.rb file, commits the changes,
+# and pushes the changes to the remote repository. It also creates a new tag
+# for the new version and pushes the tag to the remote repository.
+# It requires the version number as an argument.
+# Usage: ./bin/release <version>
 
-printf "module Kuyio\n  module Rubocop\n    VERSION = \"$VERSION\"\n  end\nend" > ./lib/kuyio/rubocop/version.rb
+# Store version argument from command line
+VERSION=$1
+if [ -z "$VERSION" ]; then
+  echo "Usage: $0 <version>"
+  exit 1
+fi
+
+# Replace VERSION contant in version.rb
+sed -i "" -e "s/VERSION.*/VERSION = \"${VERSION}\"/g" lib/kuyio/rubocop/version.rb
+
+# Call bundle
 bundle
+
+# Add files to git
 git add lib/kuyio/rubocop/version.rb
+git add Gemfile.lock
+
+# Commit push and tag
 git commit -m "Bump version for $VERSION"
 git push
 git tag v$VERSION
 git push --tags
-gem build kuyio-rubocop.gemspec
-gem push "kuyio-rubocop-$VERSION.gem" --host https://rubygems.org
-rm "kuyio-rubocop-$VERSION.gem"

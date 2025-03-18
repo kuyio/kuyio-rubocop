@@ -50,7 +50,8 @@ Naming/MethodParameterName:
 # NameWhitelist: is_a?
 Naming/PredicateName:
   Enabled: true
-  ForbiddenPrefixes: is_
+  ForbiddenPrefixes:
+    - 'is_'
   Exclude:
     - 'spec/**/*'
     - 'features/**/*'

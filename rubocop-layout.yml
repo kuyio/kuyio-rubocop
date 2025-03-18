@@ -63,6 +63,8 @@ Layout/EmptyLineBetweenDefs:
 # Don't use several empty lines in a row.
 Layout/EmptyLines:
   Enabled: true
+  Exclude:
+    - Gemfile
 
 # Keep blank lines around access modifiers.
 Layout/EmptyLinesAroundAccessModifier:

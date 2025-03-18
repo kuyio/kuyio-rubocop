@@ -36,6 +36,10 @@ Style/AsciiComments:
 Style/Attr:
   Enabled: true
 
+# Identifies places where do_something(*args, &block) can be replaced by do_something(…​).
+Style/ArgumentsForwarding:
+  Enabled: false
+
 # Avoid the use of BEGIN blocks.
 Style/BeginBlock:
   Enabled: true
@@ -321,6 +325,12 @@ Style/ParenthesesAroundCondition:
 # SupportedStyles: short, verbose
 Style/PreferredHashMethods:
   Enabled: false
+
+# By default uses the configuration of Style/StringLiterals.
+# https://docs.rubocop.org/rubocop/0.89/cops_style.html#stylepreferredstringliterals
+Style/QuotedSymbols: # (new in 0.90)
+  Enabled: false
+  EnforcedStyle: same_as_string_literals
 
 # Checks for %W when interpolation is not needed.
 Style/RedundantCapitalW:

@@ -25,7 +25,7 @@ Create a `.rubocop.yml` with the following directives:
 ```yaml
 inherit_gem:
   kuyio-rubocop:
-    - default.yml
+    - rubocop-default.yml
 ```
 
 Now, run:

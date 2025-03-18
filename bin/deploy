@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# This script is used to release a new version of the gem to RubyGems
+# It builds the gem and pushes it to RubyGems.org.
+# It also cleans up the gem file after pushing.
+# It requires the version number as an argument.
+# Usage: ./bin/deploy <version>
+
+# Store version argument from command line
+VERSION=$1
+if [ -z "$VERSION" ]; then
+  echo "Usage: $0 <version>"
+  exit 1
+fi
+
+gem build kuyio-rubocop.gemspec
+gem push "kuyio-rubocop-$VERSION.gem" --host https://rubygems.org
+rm "kuyio-rubocop-$VERSION.gem"

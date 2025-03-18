@@ -1,5 +1,5 @@
 ---
-require:
+plugins:
   - rubocop-rails
 
 # Enables Rails cops.
@@ -81,6 +81,10 @@ Rails/HasAndBelongsToMany:
 # change them to use keyword args.
 Rails/HttpPositionalArguments:
   Enabled: true
+
+# Checks for the use of `I18n.t` with a locale argument.
+Rails/I18nLocaleTexts: # (new in 2.9)
+  Enabled: false
 
 # Checks that Active Support’s inquiry method is not used.
 # https://docs.rubocop.org/rubocop-rails/2.8/cops_rails.html#railsinquiry

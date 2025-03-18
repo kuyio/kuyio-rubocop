@@ -1,5 +1,5 @@
 ---
-require:
+plugins:
   - rubocop-rspec
 
 # Check that instances are not being stubbed globally.
@@ -69,10 +69,10 @@ RSpec/ExpectChange:
 RSpec/ExpectOutput:
   Enabled: true
 
-# Checks the file and folder naming of the spec file.
-RSpec/FilePath:
-  Enabled: true
-  IgnoreMethods: true
+# # Checks the file and folder naming of the spec file.
+# Rails/FilePath:
+#   Enabled: true
+#   IgnoreMethods: true
 
 # Checks if there are focused specs.
 RSpec/Focus:

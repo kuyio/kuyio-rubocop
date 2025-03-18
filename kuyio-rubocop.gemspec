@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "kuyio/rubocop/version"
 
 Gem::Specification.new do |spec|
-  spec.required_ruby_version = '>= 2.6'
+  spec.required_ruby_version = '>= 3.0'
   spec.name          = "kuyio-rubocop"
   spec.version       = Kuyio::Rubocop::VERSION
   spec.authors       = ["KUY.io Inc."]
@@ -34,12 +34,12 @@ Gem::Specification.new do |spec|
   # importing this gem can run bundle exec rubocop out
   # of the box without having to maintain rubocop gem
   # dependencies themselves.
-  spec.add_dependency 'rubocop', '~> 1.63.0'
-  spec.add_dependency 'rubocop-performance', '~> 1.21.0'
-  spec.add_dependency 'rubocop-rails', '~> 2.24.0'
-  spec.add_dependency 'rubocop-rspec', '~> 2.29.0'
+  spec.add_dependency 'rubocop', '~> 1.74.0'
+  spec.add_dependency 'rubocop-performance', '~> 1.24.0'
+  spec.add_dependency 'rubocop-rails', '~> 2.30.0'
+  spec.add_dependency 'rubocop-rspec', '~> 3.5.0'
 
-  spec.add_development_dependency "bundler", "~> 2.3"
+  spec.add_development_dependency "bundler", "~> 2.6"
   spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency 'rubocop-rake', '~> 0.6'
+  spec.add_development_dependency 'rubocop-rake', '~> 0.7'
 end

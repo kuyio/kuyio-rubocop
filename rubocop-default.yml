@@ -1,9 +1,7 @@
 ---
-require:
-  - rubocop-rspec
-  - rubocop-performance
-  - rubocop-rails
-
+# This is a default RuboCop configuration file that inherits from various other
+# configuration files. It is designed to provide a comprehensive set of rules
+# and guidelines for Ruby code style and best practices.
 inherit_from:
   - rubocop-all.yml
   - rubocop-bundler.yml
