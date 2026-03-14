@@ -152,6 +152,18 @@ RSpec/SubjectStub:
 RSpec/VerifiedDoubles:
   Enabled: true
 
+# Checks for usage of include_examples
+RSpec/IncludeExamples:
+  Enabled: false
+
+# Checks for locals from outer scopes used inside examples
+RSpec/LeakyLocalVariable:
+  Enabled: true
+
+# Checks for puts/print in specs
+RSpec/Output:
+  Enabled: true
+
 RSpec:
   Language:
     Helpers:

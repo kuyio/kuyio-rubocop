@@ -306,3 +306,7 @@ Layout/TrailingEmptyLines:
 Layout/TrailingWhitespace:
   Enabled: true
 
+# Keep blank lines after module inclusion
+Layout/EmptyLinesAfterModuleInclusion:
+  Enabled: true
+

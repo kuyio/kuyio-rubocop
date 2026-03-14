@@ -64,3 +64,11 @@ Naming/VariableName:
 # Use the configured style when numbering variables.
 Naming/VariableNumber:
   Enabled: false
+
+# Use & block forwarding shorthand (Ruby 3.1+)
+Naming/BlockForwarding:
+  Enabled: true
+
+# Predicate methods should end with ?, no prefix enforcement
+Naming/PredicateMethod:
+  Enabled: false

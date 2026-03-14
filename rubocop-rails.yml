@@ -197,3 +197,183 @@ Rails/WhereExists:
 # https://docs.rubocop.org/rubocop-rails/2.8/cops_rails.html#railswherenot
 Rails/WhereNot:
   Enabled: true
+
+# Use flash.now instead of flash before render
+Rails/ActionControllerFlashBeforeRender:
+  Enabled: true
+
+# Use ActionDispatch::IntegrationTest instead of ActionController::TestCase
+Rails/ActionControllerTestCase:
+  Enabled: true
+
+# Enforce consistent ordering of controller actions
+Rails/ActionOrder:
+  Enabled: false
+
+# Use ActiveSupport.on_load for monkey-patching framework classes
+Rails/ActiveSupportOnLoad:
+  Enabled: true
+
+# Migrations shouldn't use index key in add_column
+Rails/AddColumnIndex:
+  Enabled: true
+
+# Use compact_blank instead of reject(&:blank?)
+Rails/CompactBlank:
+  Enabled: true
+
+# Avoid dangerous column names
+Rails/DangerousColumnNames:
+  Enabled: true
+
+# Avoid manipulating ActiveModel errors hash directly
+Rails/DeprecatedActiveModelErrorsMethods:
+  Enabled: true
+
+# Use dot-separated keys over scope in I18n
+Rails/DotSeparatedKeys:
+  Enabled: true
+
+# Don't repeat associations in a model
+Rails/DuplicateAssociation:
+  Enabled: true
+
+# Scopes sharing same expression
+Rails/DuplicateScope:
+  Enabled: true
+
+# Don't use duration as arithmetic operand with Time.current
+Rails/DurationArithmetic:
+  Enabled: true
+
+# Avoid eager log message evaluation
+Rails/EagerEvaluationLogMessage:
+  Enabled: true
+
+# Use positional arguments over keyword arguments for enums
+Rails/EnumSyntax:
+  Enabled: true
+
+# Use Rails.env.local? instead of development? || test?
+Rails/EnvLocal:
+  Enabled: true
+
+# Use date range shorthands
+Rails/ExpandedDateRange:
+  Enabled: true
+
+# Don't memoize find_by
+Rails/FindByOrAssignmentMemoization:
+  Enabled: true
+
+# Use freeze_time in tests
+Rails/FreezeTime:
+  Enabled: true
+
+# Use current HTTP status names consistently
+Rails/HttpStatusNameConsistency:
+  Enabled: true
+
+# Use lazy lookup in controllers/views — too invasive
+Rails/I18nLazyLookup:
+  Enabled: false
+
+# Use I18n.with_locale instead of I18n.locale=
+Rails/I18nLocaleAssignment:
+  Enabled: true
+
+# Use append for ignored_columns
+Rails/IgnoredColumnsAssignment:
+  Enabled: true
+
+# Migration class name should match filename
+Rails/MigrationClassName:
+  Enabled: true
+
+# No multiple paths per route (deprecated)
+Rails/MultipleRoutePaths:
+  Enabled: true
+
+# Use keyword arguments for order
+Rails/OrderArguments:
+  Enabled: true
+
+# Detect redundant .all
+Rails/RedundantActiveRecordAllMethod:
+  Enabled: true
+
+# Redundant presence validation on belongs_to (default since Rails 7)
+Rails/RedundantPresenceValidationOnBelongsTo:
+  Enabled: true
+
+# Redundant travel_back calls
+Rails/RedundantTravelBack:
+  Enabled: true
+
+# Use redirect_back_or_to
+Rails/RedirectBackOrTo:
+  Enabled: true
+
+# Prefer response.parsed_body
+Rails/ResponseParsedBody:
+  Enabled: true
+
+# Single join instead of chaining on Rails.root
+Rails/RootJoinChain:
+  Enabled: true
+
+# Use Rails.root IO methods instead of passing to File
+Rails/RootPathnameMethods:
+  Enabled: true
+
+# Use Rails.public_path over Rails.root.join('public')
+Rails/RootPublicPath:
+  Enabled: true
+
+# select(:col).map(&:col) -> pluck
+Rails/SelectMap:
+  Enabled: true
+
+# Use squiggly heredoc over strip_heredoc
+Rails/StripHeredoc:
+  Enabled: true
+
+# Use params.expect (Rails 8)
+Rails/StrongParametersExpect:
+  Enabled: true
+
+# Warn on nullable booleans
+Rails/ThreeStateBooleanColumn:
+  Enabled: true
+
+# Use to_fs over to_formatted_s
+Rails/ToFormattedS:
+  Enabled: true
+
+# Top-level HashWithIndifferentAccess is deprecated
+Rails/TopLevelHashWithIndifferentAccess:
+  Enabled: true
+
+# to_s(:format) -> to_fs(:format)
+Rails/ToSWithArgument:
+  Enabled: true
+
+# Unused content in render calls
+Rails/UnusedRenderContent:
+  Enabled: true
+
+# Use where.missing for finding missing relationships
+Rails/WhereMissing:
+  Enabled: true
+
+# Use where.not(...) correctly with multiple conditions
+Rails/WhereNotWithMultipleConditions:
+  Enabled: true
+
+# Use ranges in where
+Rails/WhereRange:
+  Enabled: true
+
+# Checks for Time.zone assignment
+Rails/TimeZoneAssignment:
+  Enabled: true

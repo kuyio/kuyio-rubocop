@@ -25,3 +25,7 @@ Gemspec/DeprecatedAttributeAssignment: # new in 1.30
 # for accounts to be able perform privileged operations
 Gemspec/RequireMFA: # new in 1.23
   Enabled: true
+
+# Use consistent style for Gemspec attributes assignment
+Gemspec/AttributeAssignment:
+  Enabled: true

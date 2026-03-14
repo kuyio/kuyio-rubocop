@@ -3,7 +3,7 @@ AllCops:
   # New cops will be triaged by style guide maintainers instead.
   NewCops: disable
   # Minimum Ruby version we want to target
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.4
   # Cop names are not displayed in offense messages by default. Change behavior
   # by overriding DisplayCopNames, or by giving the -D/--display-cop-names
   # option.
@@ -15,3 +15,10 @@ AllCops:
   # Opt out of suggesting extensions
   # see https://docs.rubocop.org/rubocop/extensions.html#extension-suggestions
   SuggestExtensions: false
+  # Standard global excludes for all projects
+  Exclude:
+    - Gemfile.lock
+    - vendor/**/*
+    - tmp/**/*
+    - db/**/*
+    - bin/**/*

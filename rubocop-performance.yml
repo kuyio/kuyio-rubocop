@@ -144,3 +144,15 @@ Performance/Sum:
 # Checks for `.times.map` calls.
 Performance/TimesMap:
   Enabled: true
+
+# Checks if map is used in a chain that can be simplified
+Performance/MapMethodChain:
+  Enabled: true
+
+# Use String#bytesize over byte-counting alternatives
+Performance/StringBytesize:
+  Enabled: true
+
+# Use zip instead of map { |id| [id] }
+Performance/ZipWithoutBlock:
+  Enabled: true

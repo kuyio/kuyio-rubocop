@@ -42,3 +42,7 @@ Metrics/PerceivedComplexity:
   Enabled: true
   Max: 14
 
+# Checks for Array or Hash literals with too many entries
+Metrics/CollectionLiteralLength:
+  Enabled: false
+

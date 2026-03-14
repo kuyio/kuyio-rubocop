@@ -395,3 +395,95 @@ Lint/UselessRuby2Keywords:
 # Possible use of operator/literal/variable in void context.
 Lint/Void:
   Enabled: true
+
+# Checks for array literal interpolated inside a regexp
+Lint/ArrayLiteralInRegexp:
+  Enabled: true
+
+# Checks for constant reassignments
+Lint/ConstantReassignment:
+  Enabled: true
+
+# Checks that # rubocop directives are strictly formatted
+Lint/CopDirectiveSyntax:
+  Enabled: true
+
+# Disallow overriding Data built-in methods via Data.define
+Lint/DataDefineOverride:
+  Enabled: true
+
+# Do not repeat patterns in `in` keywords
+Lint/DuplicateMatchPattern:
+  Enabled: true
+
+# Checks for duplicate elements in Set
+Lint/DuplicateSetElement:
+  Enabled: true
+
+# Avoid Hash.new with keyword arguments as default
+Lint/HashNewWithKeywordArgumentsAsDefault:
+  Enabled: true
+
+# Checks for local variables and method parameters named `it` (Ruby 3.4)
+Lint/ItWithoutArgumentsInBlock:
+  Enabled: true
+
+# Checks for literal assignments in conditions
+Lint/LiteralAssignmentInCondition:
+  Enabled: true
+
+# Checks for mixed case ranges (e.g. 'a'..'Z')
+Lint/MixedCaseRange:
+  Enabled: true
+
+# Checks for numeric operations with constant results
+Lint/NumericOperationWithConstantResult:
+  Enabled: true
+
+# Checks for redundant quantifiers in Regexps
+Lint/RedundantRegexpQuantifiers:
+  Enabled: true
+
+# Checks for redundantly converting a literal to the same type
+Lint/RedundantTypeConversion:
+  Enabled: true
+
+# Checks for mutable default values shared across calls
+Lint/SharedMutableDefault:
+  Enabled: true
+
+# Checks for exceptions swallowed in number conversion
+Lint/SuppressedExceptionInNumberConversion:
+  Enabled: true
+
+# Checks for unescaped literal ] in Regexp
+Lint/UnescapedBracketInRegexp:
+  Enabled: true
+
+# Checks for unreachable pattern matching branches
+Lint/UnreachablePatternBranch:
+  Enabled: true
+
+# Checks for useless constant scoping
+Lint/UselessConstantScoping:
+  Enabled: true
+
+# Checks for useless default value in fetch/Array.new
+Lint/UselessDefaultValueArgument:
+  Enabled: true
+
+# Checks for defined? with strings/symbols (always truthy)
+Lint/UselessDefined:
+  Enabled: true
+
+# Checks for useless numeric operations like x + 0
+Lint/UselessNumericOperation:
+  Enabled: true
+
+# Checks for useless OR expressions
+Lint/UselessOr:
+  Enabled: true
+
+# Checks for useless rescue blocks
+Lint/UselessRescue:
+  Enabled: true
