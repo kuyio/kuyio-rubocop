@@ -48,7 +48,7 @@ Naming/MethodParameterName:
 # NamePrefix: is_, has_, have_
 # NamePrefixBlacklist: is_, has_, have_
 # NameWhitelist: is_a?
-Naming/PredicateName:
+Naming/PredicatePrefix:
   Enabled: true
   ForbiddenPrefixes:
     - 'is_'
