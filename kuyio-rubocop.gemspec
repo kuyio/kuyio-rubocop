@@ -34,10 +34,10 @@ Gem::Specification.new do |spec|
   # importing this gem can run bundle exec rubocop out
   # of the box without having to maintain rubocop gem
   # dependencies themselves.
-  spec.add_dependency 'rubocop', '~> 1.85.0'
-  spec.add_dependency 'rubocop-performance', '~> 1.26.0'
-  spec.add_dependency 'rubocop-rails', '~> 2.34.0'
-  spec.add_dependency 'rubocop-rspec', '~> 3.9.0'
+  spec.add_dependency 'rubocop', '~> 1.92.2'
+  spec.add_dependency 'rubocop-performance', '~> 1.27.0'
+  spec.add_dependency 'rubocop-rails', '~> 2.38.0'
+  spec.add_dependency 'rubocop-rspec', '~> 3.10.2'
 
   spec.add_development_dependency "bundler", "~> 4.0"
   spec.add_development_dependency "rake", "~> 13.0"
