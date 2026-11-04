@@ -1,16 +1,18 @@
 # Releasing
 
-1. Update version.rb file accordingly.
-1. Tag the release: `git tag vVERSION`
-1. Push changes: `git push --tags`
-1. Update the release notes on GitHub.com
-1. Build and publish:
+Projects install this gem from GitHub, so pushing a version tag is the release.
+
+1. Update the version in `lib/kuyio/rubocop/version.rb`.
+1. Add the version to `CHANGELOG.md`, and note anything projects must change.
+1. Run `make test`.
+1. Commit the changes.
+1. Tag the release and push it:
 
 ```bash
-bundle exec rake build
-gem push pkg/kuyio-rubocop-X.XX.XX.gem
+git tag vX.Y.Z
+git push origin main vX.Y.Z
 ```
 
-- Announce the new release,
-  making sure to say "thank you" to the contributors
-  who helped shape this version!
+Projects pick up the new version when they run `bundle update kuyio-rubocop`.
+
+`make release` also publishes to rubygems.org, which isn't part of this process.
