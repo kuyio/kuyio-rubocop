@@ -1,0 +1,14 @@
+# Standard Trivy config for gems. Fails the scan on HIGH and CRITICAL findings.
+exit-code: 1
+severity:
+  - HIGH
+  - CRITICAL
+scan:
+  scanners:
+    - vuln
+    - secret
+    - misconfig
+  skip-dirs:
+    - .ruby-lsp
+    - node_modules
+    - vendor
