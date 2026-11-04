@@ -2,5 +2,9 @@
 
 source 'https://rubygems.org'
 
-# Specify dependencies in kuyio-rubocop.gemspec
 gemspec
+
+gem "bundler-audit", require: false
+gem "minitest"
+gem "rake", "~> 13.0"
+gem "rubocop-rake", "~> 0.7", require: false

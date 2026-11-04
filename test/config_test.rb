@@ -23,7 +23,7 @@ class ConfigTest < Minitest::Test
   def test_every_listed_cop_exists
     known = RuboCop::Cop::Registry.global.map(&:cop_name)
     unknown = Dir[File.join(ROOT, "rubocop-*.yml")].flat_map do |file|
-      # rubocop-shopify.yml is an ERB template, like any RuboCop config can be.
+      # RuboCop renders every config as ERB before parsing it, so this does too.
       names = YAML.safe_load(ERB.new(File.read(file)).result, aliases: true).keys.grep(COP_NAME)
       (names - known).map { |name| "#{File.basename(file)}: #{name}" }
     end

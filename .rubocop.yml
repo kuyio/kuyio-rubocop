@@ -2,8 +2,3 @@ inherit_from: rubocop-default.yml
 
 AllCops:
   NewCops: disable
-
-Gemspec/DevelopmentDependencies:
-  EnforcedStyle: gemspec
-  Enabled: true
-
