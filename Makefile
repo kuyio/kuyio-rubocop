@@ -5,7 +5,10 @@ VERSION = $(shell ruby -e 'puts Gem::Specification.load("$(GEM_NAME).gemspec").v
 # Supported Rubies: the previous release and the current one.
 RUBIES ?= 3.4.8 4.0.9
 
-.PHONY: all test lint spec trivy audit test-rubies build clean release-check release install
+# Prerequisites must run in order: a release must not build before tests pass.
+.NOTPARALLEL:
+
+.PHONY: all test lint spec trivy audit test-rubies build clean release-check release
 
 all: test
 
@@ -60,6 +63,3 @@ release-check:
 release: release-check test
 	git tag -a v$(VERSION) -m "v$(VERSION)"
 	git push origin v$(VERSION)
-
-install: build
-	gem install --local $(GEM_NAME)-*.gem
