@@ -20,6 +20,7 @@ spec:
 
 trivy:
 	@echo "Running vulnerability tests with Trivy ..."
+	trivy fs --config trivy.yaml --severity UNKNOWN,LOW --exit-code 0 .
 	trivy fs --config trivy.yaml .
 
 audit:
