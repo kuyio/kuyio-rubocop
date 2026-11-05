@@ -1,5 +1,13 @@
 ## [Unreleased]
 
+### Changed
+
+- `make release` now tags the version and pushes the tag, and no longer publishes to rubygems.org.
+
+### Removed
+
+- `rake release`, so that `make release` is the only release path.
+
 ## [0.6.0] - 2026-11-04
 
 ### Changed
